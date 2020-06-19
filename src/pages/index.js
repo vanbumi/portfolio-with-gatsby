@@ -11,6 +11,7 @@ export default ({ data }) => {
   // console.log(data)
   const {
     allStrapiProjects: { nodes: projects },
+    allStrapiBlogs: { nodes: blogs },
   } = data
 
   return (
@@ -19,6 +20,7 @@ export default ({ data }) => {
       <Services />
       <Jobs />
       <Projects projects={projects} title="featured projecs" showLink />
+      <Blogs blogs={blogs} title="blog" showLink />
     </Layout>
   )
 }
